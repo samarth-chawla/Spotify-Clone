@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="left">
+            <div class="home bg-grey p-1 br-1 m-1">
+                <div class="close"><img src="close.svg" class="invert"> </div>
+                <div class="logo invert"><img src="logo.svg" height="50px"></div>
+                <ul>
+                    <li><img class="invert" src="home.svg"> Home</li>
+                    <li><img class="invert" src="search.svg">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-grey br-1 m-1">
+                <div class="lib flex align-center"><img class="invert" src="library.svg">
+                    <p>Your Library</p><img class="add invert" src="add.svg">
+                </div>
+                <div class="songList">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer flex gap">
+                    <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/privacy/"><span>Safety & Privacy Center</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div><a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div><a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-grey br-1">
+            <div class="header p-1 flex space-btw align-center">
+                <div class="nav flex gap">
+                    <img src="hamburger.svg" class="hamburger invert">
+                    <img class="invert" src="left-arrow.svg">
+                    <img class="invert" src="right-arrow.svg">
+                </div>
+                <div class="buttons flex gap">
+                    <button>Sign Up</button>
+                    <button>Log In</button>
+                </div>
+            </div>
+            <div class="main bg-gray">
+                <div class="nav p-1 flex space-btw align-center">
+                    <p>Spotify Playlists</p>
+                    <!-- <p>Show All</p> -->
+                </div>
+
+                <div class="cardContainer flex">
+                    <!-- <div data-folder="mm" class="card">
+                        <div class="play">
+                            <svg data-encore-id="icon" role="img" aria-hidden="true" viewBox="0 0 24 24"
+                                class="Svg-sc-ytk21e-0 bneLcE">
+                                <path
+                                    d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z">
+                                </path>
+                            </svg>
+                        </div>
+                        <img src="SongS/MonopolyMoves/cover.jpg" alt="Party Hits">
+                        <h2>Monopoly Moves</h2>
+                        <p>A new album by King (2024) !</p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="kuchtohhai">
+                <div class="playbar flex align-center">
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="name-time flex">
+                        <div class="songinfo">
+
+                        </div>
+                        <div class="buttons flex">
+                            <img width="28px" id="previous" src="previous.svg">
+                            <img width="28px" id="play" src="play.svg">
+                            <img width="28px" id="next" src="next.svg">
+
+                        </div>
+                        <div class="vol">
+                            <div class="songtime">
+
+                            </div>
+                            <div class="vol-range">
+                                <img width="20px" src="volume.svg">
+                                <div class="range">
+                                    <input type="range" name="volume" id="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>

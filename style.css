@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.left{
+    width: 25vw;
+}
+.right{
+    margin: 5px 5px 5px 0px;
+    width: 75vw;
+}
+.left li{
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding-top: 18px;
+    list-style-type: none;
+}
+.left img{
+    height: 24px;
+}
+.library{
+    /* min-height: calc(100% - 272px); */
+    min-height: 60vh;
+    height:fit-content;
+    padding: 30px;
+    position: relative;
+}
+.lib{
+    gap: 20px; 
+    p{
+        font-size: 20px;
+        font-weight: 600;
+    }   
+}
+.lib .add{
+    height: 20px;
+}
+.footer{
+    flex-wrap: wrap;
+    font-size: 14px;
+    position: absolute;
+    bottom: 2px;
+    a{
+        text-decoration: none;
+        color: grey;
+    }
+}
+.gap{
+    gap: 16px;
+}
+.nav img{
+    height: 18px;
+}
+.buttons button{
+    font-size: 20px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: #121212;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+}
+.buttons button:hover{
+    width: 102px;
+    font-weight: 600;
+}
+.buttons button:nth-child(2){
+    background-color: white;
+    color: black;
+}
+.cardContainer{
+    margin: 10px;
+    flex-wrap: wrap;
+    height: 60vh;
+    overflow-y: scroll;
+    justify-content: center;
+}
+.card{
+    /* margin: 10px; */
+    position: relative;
+    width: 12vw;
+    padding: 20px;
+    border-radius: 8px;
+    img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+.card > * {
+    padding-top: 10px;
+}
+.hamburger{
+    display: none;
+}
+.close{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    display: none;
+}
+.vol{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.vol-range{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.play{
+    width: 32px;
+    height: 32px;
+    background-color: rgb(33 221 33);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    position: absolute;
+    right: 24px;
+    bottom: 80px;
+    opacity: 0;
+    /* z-index: 10; */
+}
+.card:hover{
+    cursor: pointer;
+    background-color: #12121296;
+    .play{
+        position: absolute;
+        right: 24px;
+        bottom: 117px;
+        opacity: 1;
+        transition: all 0.2s ease-out;
+    }
+}
+.kuchtohhai{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.playbar{
+    /* bottom: 30px; */
+    align-self: center;
+    justify-content: center;
+    position: relative;
+    width: 72vw;
+    margin: 10px;
+    border-radius: 30px;
+    /* background: rgb(44,43,43);
+    background: linear-gradient(69deg, rgb(56, 56, 56) 0%, rgba(85,198,241,0.6671918767507004) 100%, rgba(60,59,59,1) 100%, rgba(24,24,24,1) 100%); */
+    background: rgb(45,77,91);
+    background: linear-gradient(126deg, rgba(45,77,91,1) 0%, rgba(57,172,219,0.6671918767507004) 100%);
+    min-height: 11vh;
+    justify-content: center;
+    > *{
+        padding: 20px;
+    }
+}
+.songList{
+    height: 500px;
+    margin-bottom: 30px;  /* voh footter se margin dene ke liye hai sirf*/
+    overflow: auto;
+}
+.songList .info{
+    font-size: medium;
+}
+.songList ul{
+    padding: 0px;
+}
+.songList ul li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 13px;
+    gap: 15px;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin: 15px 0px;
+}
+.songList .info{
+    width: 340px;
+}
+.playnow{
+    font-size: small;
+}
+.name-time{
+    width: 100%;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.songtime{
+    max-width: fit-content;
+}
+.seekbar{
+    padding: 0px;
+    height: 1px;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: 20px;
+    cursor: pointer;
+}
+.circle{
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #686868;
+    position: relative;
+    bottom: 7px;
+    left: -5px;
+    transition: left ease-in-out 0.5s;
+}
+.playbar img{
+    cursor: pointer;
+}
+
+@media (max-width:1450px){
+    .left{
+        position: absolute;
+        left: -120%;
+        transition: all .3s;
+        z-index: 1;
+        width: 370px;
+
+    }
+    .right{
+        width: 100vw;
+    }
+    .hamburger{
+        display: block;
+    }
+    .close{
+        display: block;
+    }
+    .card{
+        font-size: 15px;
+        min-width: 150px;
+        /* max-width: max-content; */
+    }
+    .cardContainer{
+        justify-content: space-around;
+    }
+    .playbar{
+        height: auto;
+        width: 95vw;
+        margin-right: 20px;
+        /* height: fit-content; */
+    }
+
+}
+@media (max-width:680px) {
+    /* .kuchtohhai{
+        display: flex;
+        justify-content: center;
+    } */
+     .name-time{
+        gap: 10px;
+     }
+     .playbar{
+        font-size: small;
+        .buttons img{
+            width: 15px;
+        }
+    }
+     
+     /* .range{
+        display: none;
+     } */
+}
+@media (max-width:420px) {
+    .playbar{
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    .card{
+        font-size: 15px;
+        min-width: 60vw;
+        /* max-width: max-content; */
+    }
+    .range{
+        display: none;
+    }
+    .songtime{
+        max-width: fit-content;
+    }
+    .vol-range{
+        gap: 2px;
+    }
+}
