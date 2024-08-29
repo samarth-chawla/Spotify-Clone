@@ -9,7 +9,7 @@ let currFolder;
 //To get songs from the folder
 async function getSongs(folder) {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:5000/${folder}/`)
+    let a = await fetch(`https://github.com/samarth-chawla/Spotify-Clone/tree/main/${folder}/`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -72,7 +72,7 @@ function convertSeconds(seconds) {
 }
 
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:5000/songs`)
+    let a = await fetch(`https://github.com/samarth-chawla/Spotify-Clone/tree/main/SongS`)
     let response = await a.text();
     let div = document.createElement("div")
     div.innerHTML = response;
@@ -84,7 +84,7 @@ async function displayAlbums() {
         if (e.href.includes("/songs")) {
             let folder = e.href.split("/").slice(-2)[0]    //to get folders name
             //to get the metadata of my folder
-            let a = await fetch(`http://127.0.0.1:5000/songs/${folder}/info.json`)
+            let a = await fetch(`https://github.com/samarth-chawla/Spotify-Clone/tree/main/SongS/${folder}/info.json`)
             let response = await a.json();
             console.log(response)
             cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}"  class="card">
